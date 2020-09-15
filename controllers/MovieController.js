@@ -55,10 +55,29 @@ exports.deleteMovie = async (req, res) => {
   }
 };
 
-exports.addMovie = (req, res) => {
+exports.addMovie = async (req, res) => {
   console.log(`[ Add Movie ] ${req.requestTime}`);
+  try {
+    const movies = await fetchMovies(`${__dirname}/../data/movies.json`);
+    const id = movies.length - 1;
+    res.send('path under construction');
+  } catch (err) {
+    throw err;
+  }
 };
 
-exports.getMovies = (req, res) => {
+exports.getMovies = async (req, res) => {
   console.log(`[ Get Movies ] ${req.requestTime}`);
+  try {
+    const movies = await fetchMovies(`${__dirname}/../data/movies.json`);
+    res.status(200).json({
+      length: movies.length,
+      status: 'success',
+      data: {
+        movies,
+      },
+    });
+  } catch (err) {
+    throw err;
+  }
 };

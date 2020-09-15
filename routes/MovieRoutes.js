@@ -1,6 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
+router.param('id', (req, res, next, val) => {
+  const idObj = {
+    id: `${val}`,
+  };
+  console.log(idObj);
+  next();
+});
+
 const movieController = require('../controllers/MovieController');
 
 router
