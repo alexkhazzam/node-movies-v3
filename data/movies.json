@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Harry Potter",
+    "rating": 10
+  },
+  {
+    "id": 2,
+    "title": "Game of Thrones",
+    "rating": 10
+  },
+  {
+    "id": 3,
+    "title": "Percy Jackson",
+    "rating": 10
+  },
+  {
+    "id": 4,
+    "title": "Maze Runner",
+    "rating": 10
+  },
+  {
+    "id": 5,
+    "title": "Divergent",
+    "rating": 10
+  }
+]
